@@ -33,10 +33,15 @@ public class CoupleAdapter extends RecyclerView.Adapter<CoupleAdapter.CoupleView
 
     @Override
     public void onBindViewHolder(@NonNull CoupleViewHolder holder, int position) {
-        holder.coupleTitle.setText(couples.get(position).getTitle() + couples.get(position).getTeacher());
-        holder.coupleNumber.setText((couples.get(position).getNumber()) + " " + holder.coupleNumber.getText());
-        holder.coupleTime.setText(couples.get(position).getTime());
-        holder.coupleRoom.setText("АУД." + couples.get(position).getRoom());
+        String coupleTitle = couples.get(position).getTitle() + couples.get(position).getTeacher();
+        String coupleNumber = couples.get(position).getNumber() + holder.coupleNumber.getText().toString();
+        String coupleRoom = "АУД." + couples.get(position).getRoom();
+        String coupleTime = couples.get(position).getTime();
+
+        holder.coupleTitle.setText(coupleTitle);
+        holder.coupleNumber.setText(coupleNumber);
+        holder.coupleTime.setText(coupleTime);
+        holder.coupleRoom.setText(coupleRoom);
     }
 
     @Override

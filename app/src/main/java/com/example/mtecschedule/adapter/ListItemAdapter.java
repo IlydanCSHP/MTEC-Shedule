@@ -10,8 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mtecschedule.ScheduleActivity;
 import com.example.mtecschedule.R;
+import com.example.mtecschedule.ScheduleActivity;
 import com.example.mtecschedule.model.ListItem;
 
 import java.util.List;
@@ -40,10 +40,12 @@ public class ListItemAdapter extends RecyclerView.Adapter<ListItemAdapter.ListIt
 
         holder.itemView.setOnClickListener((v) -> {
 
-                Intent intent = new Intent(context, ScheduleActivity.class);
+            Intent intent = new Intent(context, ScheduleActivity.class);
 
-                intent.putExtra("title", holder.itemText.getText());
-                context.startActivity(intent);
+            intent.putExtra("title", holder.itemText.getText());
+            intent.putExtra("id", (Long) items.get(position).getId());
+            Long test = items.get(position).getId();
+            context.startActivity(intent);
 
         });
     }

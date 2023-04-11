@@ -9,7 +9,7 @@
     <item
             android:title="@string/group_item_text"
             android:icon="@drawable/round_groups_24"
-            android:id="@+id/groupTitle"/>
+            android:id="@+id/groups"/>
     <item
             android:title="@string/teacher_item_text"
             android:icon="@drawable/teacher"

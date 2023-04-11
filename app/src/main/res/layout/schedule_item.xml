@@ -18,6 +18,7 @@
                 android:id="@+id/couple_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:maxWidth="300dp"
                 android:text="@string/group_item_text"
                 android:layout_margin="8dp"
                 android:textColor="@color/text_color"
