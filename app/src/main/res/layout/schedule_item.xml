@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/schedule_item"
+            android:elevation="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp">
+
+        <TextView
+                android:id="@+id/couple_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/group_item_text"
+                android:layout_margin="8dp"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/montserrat"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+                android:text="@string/couple_item_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/couple_number"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat"
+                android:textSize="11sp"
+                android:textColor="@color/text_color_50"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@+id/couple_time"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/couple_time"
+                app:layout_constraintStart_toStartOf="@+id/couple_time" />
+
+        <TextView
+                android:text="@string/time_item_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:id="@+id/couple_time"
+                android:textColor="@color/text_color_50"
+                android:fontFamily="@font/montserrat"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/couple_number"
+                android:layout_marginEnd="8dp" />
+
+        <TextView
+                android:text="@string/room_item_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:id="@+id/couple_room"
+                android:textColor="@color/text_color_50"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/montserrat"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/couple_time"
+                app:layout_constraintTop_toBottomOf="@+id/couple_time"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/couple_time" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

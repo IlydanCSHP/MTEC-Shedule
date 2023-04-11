@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MTEC Schedule</string>
+    <string name="app_title">Расписание</string>
+    <string name="img_desc">Image</string>
+    <string name="no_schedule_text">Нет сохраненных расписаний</string>
+    <string name="group_item_text">Группы</string>
+    <string name="teacher_item_text">Преподаватели</string>
+    <string name="main_item_text">Главная</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="date_item_text">Дата</string>
+    <string name="room_item_text">АУД.</string>
+    <string name="time_item_text">Время</string>
+    <string name="couple_item_text">Пара</string>
+</resources>
