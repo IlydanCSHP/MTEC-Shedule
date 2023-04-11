@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     TextView noSchedule;
     List<ListItem> items = new ArrayList<>();
 
+    TextView test;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,13 +83,5 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
-    }
-
-    private void replaceFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout, fragment);
-//        fragmentTransaction.hide(fragment);
-        fragmentTransaction.commit();
     }
 }
