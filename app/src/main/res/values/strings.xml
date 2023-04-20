@@ -12,4 +12,8 @@
     <string name="room_item_text">АУД.</string>
     <string name="time_item_text">Время</string>
     <string name="couple_item_text">Пара</string>
+    <string name="enter_button_text">Войти</string>
+    <string name="for_admin_text">Для администрации</string>
+    <string name="load_schedule_text">Загрузить расписание</string>
+    <string name="save_schedule_text">Сохранить расписание</string>
 </resources>

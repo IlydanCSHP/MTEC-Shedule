@@ -103,7 +103,7 @@ public class ScheduleActivity extends AppCompatActivity {
     private void loadCouples() {
         coupleList.add(new Couple(1, "Учебная практика по программированию", "(Янцевич Л.А.)", "8:00-9:40", 42, 1));
         coupleList.add(new Couple(2, "Учебная практика по программированию", "(Янцевич Л.А.)", "8:00-9:40", 42, 2));
-        coupleList.add(new Couple(3, "Учебная практика по программированию", "(Янцевич Л.А.)", "8:00-9:40", 42, 3));
+        coupleList.add(new Couple(3, "Основы экономики", "(Янцевич Л.А.)", "8:00-9:40", 42, 3));
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
