@@ -10,43 +10,43 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mtecschedule.R;
-import com.example.mtecschedule.model.Couple;
+import com.example.mtecschedule.model.Pair;
 
 import java.util.List;
 
 public class CoupleAdapter extends RecyclerView.Adapter<CoupleAdapter.CoupleViewHolder> {
     Context context;
-    List<Couple> couples;
+    List<Pair> pairs;
 
-    public CoupleAdapter(Context context, List<Couple> couples) {
+    public CoupleAdapter(Context context, List<Pair> pairs) {
         this.context = context;
-        this.couples = couples;
+        this.pairs = pairs;
     }
 
     @NonNull
     @Override
     public CoupleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View coupleItem = LayoutInflater.from(context).inflate(R.layout.schedule_item, parent, false);
+        View coupleItem = LayoutInflater.from(context).inflate(R.layout.pair_item, parent, false);
 
         return new CoupleViewHolder(coupleItem);
     }
 
     @Override
     public void onBindViewHolder(@NonNull CoupleViewHolder holder, int position) {
-        String coupleTitle = couples.get(position).getTitle() + couples.get(position).getTeacher();
-        String coupleNumber = couples.get(position).getNumber() + holder.coupleNumber.getText().toString();
-        String coupleRoom = "АУД." + couples.get(position).getRoom();
-        String coupleTime = couples.get(position).getTime();
+        String coupleTitle = pairs.get(position).getTitle() + pairs.get(position).getTeacher();
+        String coupleNumber = pairs.get(position).getNumber() + holder.coupleNumber.getText().toString();
+        String coupleRoom = "АУД." + pairs.get(position).getRoom();
+//        String coupleTime = pairs.get(position).getTime();
 
         holder.coupleTitle.setText(coupleTitle);
         holder.coupleNumber.setText(coupleNumber);
-        holder.coupleTime.setText(coupleTime);
+//        holder.coupleTime.setText(coupleTime);
         holder.coupleRoom.setText(coupleRoom);
     }
 
     @Override
     public int getItemCount() {
-        return couples.size();
+        return pairs.size();
     }
 
     public static final class CoupleViewHolder extends RecyclerView.ViewHolder {

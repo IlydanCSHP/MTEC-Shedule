@@ -12,6 +12,15 @@
             android:theme="@style/MTECSchedule"
             tools:targetApi="31">
         <activity
+                android:name=".SingleScheduleActivity"
+                android:exported="false" />
+        <activity
+                android:name=".AddPairActivity"
+                android:exported="false" />
+        <activity
+                android:name=".AddScheduleActivity"
+                android:exported="false" />
+        <activity
                 android:name=".AdminActivity"
                 android:exported="false" />
         <activity
@@ -29,8 +38,7 @@
                 android:exported="false" />
         <activity
                 android:name=".MainActivity"
-                android:exported="true">
-        </activity>
+                android:exported="true" />
     </application>
 
 </manifest>

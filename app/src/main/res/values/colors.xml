@@ -11,6 +11,8 @@
     <color name="text_color">#16262F</color>
     <color name="text_color_50">#8816262F</color>
     <color name="orange_mtec">#F6AD0A</color>
+    <color name="red_mtec">#E4010C</color>
+    <color name="ripple_color">#1f000000</color>
     <color name="dark_orange_mtec">#886D30</color>
     <color name="blue_mtec">#0380C8</color>
     <color name="blue_mtec_50">#440380C8</color>

@@ -44,7 +44,7 @@
                 app:layout_constraintStart_toStartOf="@+id/couple_time" />
 
         <TextView
-                android:text="@string/time_item_text"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -54,7 +54,7 @@
                 android:textSize="11sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/couple_number"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginEnd="16dp" />
 
         <TextView
                 android:text="@string/room_item_text"

@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.mtecschedule.adapter.ListItemAdapter;
+import com.example.mtecschedule.databinding.ActivityAdminBinding;
 import com.example.mtecschedule.databinding.ActivityMainBinding;
 import com.example.mtecschedule.model.ListItem;
 
@@ -25,54 +26,35 @@ public class AdminActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.activity_admin);
+        ActivityAdminBinding binding = ActivityAdminBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         setActionBar(getSupportActionBar());
+        getGroups();
 
         binding.navbar.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
-            if (itemId == R.id.home) {
-                loadHome();
-            } else if (itemId == R.id.groups) {
-                loadGroups();
-            } else if (itemId == R.id.teachers) {
-                loadTeachers();
+            if (itemId == R.id.groups) {
+                getGroups();
+            }
+            if (itemId == R.id.teachers) {
+                getTeachers();
             }
             return true;
         });
     }
 
-    private void loadHome() {
-
+    private void getTeachers() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frame_layout, new TeachersFragment())
+                .commit();
     }
 
-    private void loadTeachers() {
-        items.clear();
-        items.add(new ListItem(5, "Апетенок Оксана Николаевна"));
-        items.add(new ListItem(6, "Бекназарян Светлана Александровна"));
-        items.add(new ListItem(7, "Буринская Анна Игоревна"));
-        items.add(new ListItem(8, "Василевич Андрей Еремеевич"));
-        items.add(new ListItem(9, "Васюта Татьяна Валерьевна"));
-        items.add(new ListItem(10, "Гайдукевич Руслан Иванович"));
-        setItemsRecycler(items);
+    private void getGroups() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frame_layout, new GroupsFragment())
+                .commit();
     }
 
-    private void loadGroups() {
-        items.clear();
-        items.add(new ListItem(1, "СП 105"));
-        items.add(new ListItem(2, "СП 205"));
-        items.add(new ListItem(3, "СП 305"));
-        items.add(new ListItem(4, "СП 405"));
-        setItemsRecycler(items);
-    }
-
-    private void setItemsRecycler(List<ListItem> items) {
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
-        RecyclerView itemsList = findViewById(R.id.items_list);
-        ListItemAdapter adapter = new ListItemAdapter(this, items);
-        itemsList.setLayoutManager(layoutManager);
-        itemsList.setAdapter(adapter);
-    }
     private void setActionBar(ActionBar actionBar) {
         if (actionBar != null) {
             actionBar.setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.red_gradient_navbar));

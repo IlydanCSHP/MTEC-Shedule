@@ -5,13 +5,13 @@ import java.util.List;
 public class SchedulePage {
     private long id;
     private String title, date;
-    private List<Couple> coupleList;
+    private List<Pair> pairList;
 
-    public SchedulePage(long id, String title, String date, List<Couple> coupleList) {
+    public SchedulePage(long id, String title, String date, List<Pair> pairList) {
         this.id = id;
         this.title = title;
         this.date = date;
-        this.coupleList = coupleList;
+        this.pairList = pairList;
     }
 
     public long getId() {
@@ -38,11 +38,11 @@ public class SchedulePage {
         this.date = date;
     }
 
-    public List<Couple> getCouplesList() {
-        return coupleList;
+    public List<Pair> getCouplesList() {
+        return pairList;
     }
 
-    public void setCouplesList(List<Couple> coupleList) {
-        this.coupleList = coupleList;
+    public void setCouplesList(List<Pair> pairList) {
+        this.pairList = pairList;
     }
 }

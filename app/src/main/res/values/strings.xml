@@ -16,4 +16,16 @@
     <string name="for_admin_text">Для администрации</string>
     <string name="load_schedule_text">Загрузить расписание</string>
     <string name="save_schedule_text">Сохранить расписание</string>
+    <string name="pair_item_text">Пары</string>
+    <string name="group_speciality_hint">Специальность</string>
+    <string name="group_title_hint">Название</string>
+    <string name="group_full_title_hint">Полное название</string>
+    <string name="group_course_hint">№ Курса</string>
+    <string name="add_group_title">Добавить группу</string>
+    <string name="update_group_title">Изменить группу</string>
+    <string name="close_button_text">Закрыть</string>
+    <string name="change_button_text">Изменить</string>
+    <string name="add_button_text">Добавить</string>
+    <string name="schedule_list_title">Список расписаний</string>
+    <string name="add_schedule_text">Добавить расписание</string>
 </resources>
